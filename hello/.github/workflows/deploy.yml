@@ -12,13 +12,11 @@ jobs:
     steps:
       - name: checkout repository
         uses: actions/checkout@v2
-        env:
-          GITHUB_WORKSPACE: ./hello
       - name: publish worker
         uses: cloudflare/wrangler-action@1.2.0
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
-        env:
-          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
-          GITHUB_WORKSPACE: ./hello
+    env:
+      CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+      GITHUB_WORKSPACE: ./hello
         
