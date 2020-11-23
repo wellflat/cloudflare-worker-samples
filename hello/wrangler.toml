@@ -1,6 +1,11 @@
 name = "hello"
 type = "javascript"
-account_id = ""
+account_id = "e551fa305bc02d06a8c237dd9f221591"
 workers_dev = true
-route = ""
-zone_id = ""
+kv_namespaces = [
+  {binding = "test", id = "4c8cd836b9bc4eb4ab41a64366801e91"}
+]
+
+[env.production]
+route = "rest-term.com/worker/hello"
+zone_id = "3ed001c49b3a1634b4b79bfd21b12561"
