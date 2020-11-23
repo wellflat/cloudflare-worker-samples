@@ -6,7 +6,8 @@ addEventListener('fetch', event => {
  * @param {Request} request
  */
 async function handleRequest(request) {
-  return new Response('Hello worker!', {
+  const content = await test.get("test_key");
+  return new Response(content, {
     headers: { 'content-type': 'text/plain' },
   })
 }
