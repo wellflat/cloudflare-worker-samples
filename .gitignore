@@ -1,7 +1,2 @@
 node_modules/
-<<<<<<< HEAD
 dist/
-wrangler.toml
-=======
-
->>>>>>> 89dc6f254a50af4b19cfc44aa2346e232b767dfd
